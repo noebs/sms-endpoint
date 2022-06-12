@@ -952,13 +952,15 @@ func (n *NoebsConfig) GetMerchantQA() string {
 	}
 	if n.MerchantIP == "" {
 		return "https://172.16.199.1:8181/QAEBSGateway/"
+		//return "https://172.16.199.1:8181/QAEBSGateway/" //172.16.199.1 port 8181
 	}
 	return n.MerchantIP
 }
 
 func (n *NoebsConfig) GetMerchant() string {
 	if n.Merchant == "" {
-		return "https://172.16.198.14:8888/EBSGateway/"
+		return "https://10.130.9.200:12346/EBSGateway"
+		//return "https://172.16.198.14:8888/EBSGateway/" //10.130.9.200 port 12346
 	}
 	return n.Merchant
 }

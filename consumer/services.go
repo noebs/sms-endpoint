@@ -576,7 +576,7 @@ func (s *Service) SendSMS(c *gin.Context) {
 		// return successful response
 		c.JSON(http.StatusOK, gin.H{"phone": fields.Mobile, "message": fields.Message})
 	} else {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error(), "code": "Provider Error"})
+		c.JSON(http.StatusBadGateway, gin.H{"error": err.Error(), "code": "Provider Error"})
 	}
 }
 
